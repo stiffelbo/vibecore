@@ -1,0 +1,24 @@
+{
+  "name": "vibecore/vibecore",
+  "description": "VibeCore - schema-driven backend toolkit for PHP 8+",
+  "type": "project",
+  "license": "proprietary",
+  "require": {
+    "php": "^8.2"
+  },
+  "autoload": {
+    "psr-4": {
+      "VibeCore\\": "core/src/",
+      "VibeApp\\": "app/src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "VibeCore\\Tests\\": "core/tests/",
+      "VibeApp\\Tests\\": "app/tests/"
+    }
+  },
+  "config": {
+    "sort-packages": true
+  }
+}
