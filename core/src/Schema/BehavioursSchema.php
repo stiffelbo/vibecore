@@ -2,6 +2,8 @@
 
 namespace VibeCore\Schema;
 
+use VibeCore\Schema\{TimestampsSpec, SoftDeleteSpec, ActorSpec};
+
 final class BehavioursSchema
 {
     public function __construct(

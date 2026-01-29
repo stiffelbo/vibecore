@@ -23,6 +23,19 @@ final class RequestFactory
 
         $body = $this->readBody($headers);
 
+        $uri = $_SERVER['REQUEST_URI'] ?? '/';
+        
+        $path = parse_url($uri, PHP_URL_PATH) ?: '/';
+
+        // base path = katalog gdzie leży index.php
+        $scriptName = $_SERVER['SCRIPT_NAME'] ?? ''; // np. /vibecore/app/index.php
+        $base = rtrim(str_replace('\\', '/', dirname($scriptName)), '/'); // /vibecore/app
+
+        if ($base !== '' && str_starts_with($path, $base)) {
+            $path = substr($path, strlen($base));
+            if ($path === '') $path = '/';
+        }
+
         return new Request(
             method: strtoupper($method),
             path: $path,
