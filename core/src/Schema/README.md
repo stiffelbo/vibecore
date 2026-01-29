@@ -24,3 +24,7 @@ Schema is declarative and transformable.
 ## Dependencies
 - May depend on Support
 - Must remain independent from Persistence gateways and Http request specifics
+
+## DB migrations 
+- FieldName, DataType, DbMeta + entity level DbSchema constraints
+- changes in above requires migrations. Other fields provides only runtime schemas.
