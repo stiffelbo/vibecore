@@ -1,4 +1,4 @@
-# VibeCore /src
+# VibeCore/src
 
 ## Intent
 VibeCore is an infrastructure kernel for schema-driven business apps.
