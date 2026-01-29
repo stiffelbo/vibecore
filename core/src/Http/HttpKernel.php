@@ -24,6 +24,8 @@ final class HttpKernel implements HttpKernelInterface
     {
         $ctx = $this->baseContext ?? RequestContext::empty();
 
+        /** @var callable(Request, RequestContext): Response $next */
+        
         $next = function (Request $req, RequestContext $ctx) : Response {
             return $this->handler->handle($req, $ctx);
         };
